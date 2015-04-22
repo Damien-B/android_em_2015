@@ -4,5 +4,5 @@
     tools:context="fr.damienbannerot.android.firstapplication.MenuActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/action_logout" android:title="logout" app:showAsAction="never" />
+    <item android:id="@+id/action_logout" android:title="@string/act_menu_dialog_title" app:showAsAction="never" />
 </menu>

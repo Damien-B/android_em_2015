@@ -2,24 +2,24 @@
     <string name="app_name">FirstApplication</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="act_main_email">Entrez votre email</string>
-    <string name="act_main_password">Mot de passe</string>
-    <string name="act_main_submit">Envoyer</string>
-    <string name="act_main_email_notfound">Entrez votre addresse email</string>
-    <string name="act_main_password_notfound">Entrez votre mot de passe</string>
-    <string name="title_activity_menu">MenuActivity</string>
-    <string name="act_main_invalid_password">Mot de passe invalide</string>
-    <string name="act_menu_dialog_title">Logout</string>
-    <string name="act_menu_dialog_message">Êtes-vous sûr(e) de vouloir quitter l\'application ?</string>
+    <string name="act_main_submit">Send</string>
+    <string name="act_main_password_notfound">Enter your password</string>
+    <string name="title_activity_menu" translatable="false">MenuActivity</string>
+    <string name="act_menu_dialog_message">Are you sure you want to disconnect ?</string>
     <string name="ok">Ok</string>
-    <string name="cancel">Annuler</string>
-    <string name="title_activity_web_view">WebViewActivity</string>
-    <string name="act_webview_goo">Go!</string>
-    <string name="act_webview_no_url_message">Veuillez entrer une adresse url</string>
+    <string name="title_activity_web_view" translatable="false">WebViewActivity</string>
     <string name="act_menu_btn_webview">Webview</string>
-    <string name="title_activity_activity_photo">activity_photo</string>
-    <string name="title_activity_photo">PhotoActivity</string>
-    <string name="act_photo_btn_submit">Prendre une photo</string>
+    <string name="title_activity_activity_photo" translatable="false">activity_photo</string>
+    <string name="title_activity_photo" translatable="false">PhotoActivity</string>
+    <string name="act_main_email">Enter your email</string>
+    <string name="act_main_email_notfound">Enter your email address</string>
+    <string name="act_main_invalid_password">Wrong password</string>
+    <string name="act_main_password">Password</string>
+    <string name="act_menu_dialog_title">Logout</string>
     <string name="act_menu_photo">Photo</string>
+    <string name="act_photo_btn_submit">Take a photo</string>
+    <string name="act_webview_goo">Go</string>
+    <string name="act_webview_no_url_message">Please enter a valid url address</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
 </resources>

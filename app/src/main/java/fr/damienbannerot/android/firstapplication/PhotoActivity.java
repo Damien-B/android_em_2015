@@ -1,9 +1,7 @@
 package fr.damienbannerot.android.firstapplication;
 
-import android.app.Application;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,8 +19,10 @@ public class PhotoActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        myApplication = (MyApplication) getApplication();
+        //myApplication = (MyApplication) getApplication();
+        //mySingleton = MySingleton.getInstance();
         setContentView(R.layout.activity_photo);
+        setImageBitmap();
     }
 
 
@@ -45,12 +45,7 @@ public class PhotoActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        MySingleton.onOptionsItemSelected(this, item);
 
         return super.onOptionsItemSelected(item);
     }
@@ -66,17 +61,20 @@ public class PhotoActivity extends ActionBarActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_CANCELED) return;
         super.onActivityResult(requestCode, resultCode, data);
 
 
         Bundle extras = data.getExtras();
-        myApplication.myBitmap = (Bitmap) extras.get("data");
-        setImageBitmap();
+        if(extras != null){
+            MySingleton.setBitmap((Bitmap) extras.get("data"));
+            setImageBitmap();
+        }
 
     }
 
     private void setImageBitmap(){
         ImageView mImageView = (ImageView) findViewById(R.id.act_photo_imageView);
-        mImageView.setImageBitmap(myApplication.myBitmap);
+        mImageView.setImageBitmap(MySingleton.getBitmap());
     }
 }

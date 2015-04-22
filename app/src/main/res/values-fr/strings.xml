@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application Android 1</string>
+    <string name="act_main_email">Entrez votre email</string>
+    <string name="act_main_email_notfound">Entrez votre addresse email</string>
+    <string name="act_main_invalid_password">Mot de passe invalide</string>
+    <string name="act_main_password">Mot de passe</string>
+    <string name="act_main_password_notfound">Entrez votre mot de passe</string>
+    <string name="act_main_submit">Envoyer</string>
+    <string name="act_menu_btn_webview">Webview</string>
+    <string name="act_menu_dialog_message">Êtes-vous sûr(e) de vouloir vous déconnecter ?</string>
+    <string name="act_menu_dialog_title">Se déconnecter</string>
+    <string name="act_menu_photo">Photo</string>
+    <string name="act_photo_btn_submit">Prendre une photo</string>
+    <string name="act_webview_goo">Go</string>
+    <string name="act_webview_no_url_message">Veuillez entrer une adresse url</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="cancel">Annuler</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_activity_photo">photo activité</string>
+    <string name="ok">Ok</string>
+    <string name="title_activity_menu">menu activité</string>
+    <string name="title_activity_photo">photo activité</string>
+    <string name="title_activity_web_view">webview activité</string>
+</resources>
