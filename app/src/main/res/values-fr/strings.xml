@@ -22,4 +22,6 @@
     <string name="title_activity_menu">menu activité</string>
     <string name="title_activity_photo">photo activité</string>
     <string name="title_activity_web_view">webview activité</string>
+    <string name="action_lang_en">anglais</string>
+    <string name="action_lang_fr">français</string>
 </resources>

@@ -21,7 +21,9 @@ public class PhotoActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         //myApplication = (MyApplication) getApplication();
         //mySingleton = MySingleton.getInstance();
+        MySingleton.restoreLang(this);
         setContentView(R.layout.activity_photo);
+        setTitle(R.string.title_activity_activity_photo);
         setImageBitmap();
     }
 
@@ -29,7 +31,7 @@ public class PhotoActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_photo, menu);
+        getMenuInflater().inflate(R.menu.menu_menu, menu);
         return true;
     }
 

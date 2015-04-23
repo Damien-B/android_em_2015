@@ -32,7 +32,9 @@ public class MenuActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        MySingleton.restoreLang(this);
         getMenuInflater().inflate(R.menu.menu_menu, menu);
+        setTitle(R.string.title_activity_menu);
         return true;
     }
 

@@ -5,4 +5,6 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_logout" android:title="@string/act_menu_dialog_title" app:showAsAction="never" />
+    <item android:id="@+id/action_lang_en" android:title="@string/action_lang_en" app:showAsAction="never" />
+    <item android:id="@+id/action_lang_fr" android:title="@string/action_lang_fr" app:showAsAction="never" />
 </menu>

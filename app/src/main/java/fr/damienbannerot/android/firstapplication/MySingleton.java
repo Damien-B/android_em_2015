@@ -5,17 +5,21 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
+import java.util.Locale;
+
 /**
  * Created by Damien on 22/04/15.
  */
 public class MySingleton {
     private static MySingleton ourInstance = new MySingleton();
+    private static Locale locale;
     private Bitmap bitmap;
 
     public static Bitmap getBitmap() {
@@ -32,15 +36,51 @@ public class MySingleton {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.action_logout) {
-            askLogoutConfirmation(activity);
-            return true;
-        }
 
+        switch(id){
+            case R.id.action_settings :
+                return true;
+            case R.id.action_logout :
+                askLogoutConfirmation(activity);
+                return true;
+            case R.id.action_lang_en :
+                changeLang(activity, "en");
+                return true;
+            case R.id.action_lang_fr :
+                changeLang(activity, "fr");
+
+                return true;
+        }
         return true;
+    }
+
+    private static void changeLang(ActionBarActivity activity, String lang){
+        saveLang(activity, lang);
+        setLocale(activity, lang);
+        activity.recreate();
+    }
+
+    private static void saveLang(ActionBarActivity activity, String lang){
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences((Activity) activity);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("lang", lang);
+        editor.commit();
+    }
+
+    public static void restoreLang(ActionBarActivity activity){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences((Activity) activity);
+        setLocale(activity, preferences.getString("lang", "en"));
+    }
+
+    private static void setLocale(ActionBarActivity activity, String lang){
+        locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+
+        activity.getResources().updateConfiguration(config, null);
+
     }
 
 
